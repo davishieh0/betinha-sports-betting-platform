@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+{% with messages = get_flashed_messages() %}
+{% if messages %} 
+    <ul id="messages" class="list-unstyled">
+    {% for message in messages %}
+        <li class="alert alert-success">{{ message }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+
+    <h1>Página de Login</h1>
+    <form action="{{url_for('autenticar')}}"method="POST">
+        <fieldset>
+            <label for="">Email</label>
+            <input type="email" name="email" required>
+
+            <label for="">Senha</label>
+            <input type="password" name="senha" required>
+
+            <button type="submit">Salvar</button>
+        </fieldset>
+        
+
+    </form>
+    
+</body>
+</html>

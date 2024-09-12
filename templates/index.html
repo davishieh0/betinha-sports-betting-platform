@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Página de Eventos</h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>Data de nascimento</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in lista%}
+            <tr>
+                
+                <td>{{item.nome}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.senha}}</td>
+                <td>{{item.data_nascimento}}</td>
+                <td>{{item.saldo}}</td>
+                
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</body>
+</html>

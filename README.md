@@ -1,6 +1,6 @@
 # Checklist Flask Betinha 777
 
-- [ ]  Cadastro e login:
+- [x]  Cadastro e login:
 - nome, e-mail, senha, e data de nascimento, saldo.
 - O login deve ser feito com o e-mail e senha.
 - [ ]  Criação de eventos:
@@ -25,3 +25,4 @@ Após isso, o sistema deve de maneira proporcional aos valores apostados:
 
 - Remover os valores das wallets de quem perdeu
 - Depositar o dinheiro para quem ganhou.
+
