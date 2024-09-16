@@ -3,7 +3,8 @@
 - [x]  Cadastro e login:
 - nome, e-mail, senha, e data de nascimento, saldo.
 - O login deve ser feito com o e-mail e senha.
-- [ ]  Criação de eventos:
+- [x]  Criação de eventos:
+- [] autenticação dos eventos
 - **título** de até 50 caracteres, uma **descrição** curta de até 150 caracteres sobre esse evento
 - **valor de cota:** no mínimo 1 real e 0 centavos.
 - **Período de recebimento de aposta** é dado como a data e hora do início e data e hora de fim.

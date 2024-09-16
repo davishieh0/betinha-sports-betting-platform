@@ -30,14 +30,14 @@ app.secret_key = 'betinhaPapaGrana'  # Necessário para usar sessões e flashes
 
 @app.route('/')
 def index():
-    return render_template('index.html',lista=lista_users)
+    return render_template('index.html',lista=lista_eventos)
 
 @app.route('/cadastro')
 def cadastro():
     return render_template('cadastro.html')
 
 
-@app.route('/criar',methods=['POST', ])
+@app.route('/criar_user',methods=['POST', ])
 def criar():
     nome = request.form['nome']
     email = request.form['email']
@@ -58,19 +58,20 @@ def criar():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    proxima = request.args.get('proxima')
+    return render_template('login.html', proxima = proxima)
 
 @app.route('/autenticar',methods=['POST', ]) 
 def autenticar():
     email = request.form['email']
     senha = request.form['senha']
-
+    proxima_pagina = request.form['proxima']
     if email in usuario_login:
         if senha == usuario_login[email].senha:
             #Parte mais chata de entender 
             session['usuario'] = email
             flash(f'{email} foi logado com sucesso!')
-            return redirect(url_for('index'))
+            return redirect((proxima_pagina))
     else:
         flash(f'Email ou senha incorretos')
         return redirect(url_for('login'))
@@ -82,9 +83,12 @@ def logout():
     return redirect(url_for('index'))
 
 
-@app.route('/evento')
-def evento():
-    return render_template('evento.html')
+@app.route('/novo_evento')
+def novo_evento():
+    if 'usuario' not in session or session ['usuario'] == None:
+        return redirect (url_for('login',proxima=url_for('novo_evento')))
+    return render_template('novo_evento.html')
+
 
 @app.route('/criar_evento',methods=['POST', ])
 def criar_evento():

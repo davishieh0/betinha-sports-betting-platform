@@ -18,8 +18,9 @@
 {% endwith %}
 
     <h1>Página de Login</h1>
-    <form action="{{url_for('autenticar')}}"method="POST">
+    <form method="POST" action="{{url_for('autenticar')}}">
         <fieldset>
+            <input type="hidden" name="proxima" value="{{proxima}}">
             <label for="">Email</label>
             <input type="email" name="email" required>
 
@@ -31,6 +32,6 @@
         
 
     </form>
-    
+
 </body>
 </html>

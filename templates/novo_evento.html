@@ -6,7 +6,7 @@
     <title>Formulário de Evento</title>
 </head>
 <body>
-    <form action="/criar_evento" method="post">
+    <form action="{{url_for('criar_evento')}}"method="POST">
         <label for="titulo">Título:</label><br>
         <input type="text" id="titulo" name="titulo" required><br><br>
         
