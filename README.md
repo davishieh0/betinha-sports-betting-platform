@@ -1,4 +1,4 @@
-# Betinha 777 - Plataforma de Apostas
+#Plataforma de Apostas
 
 Uma plataforma de apostas esportivas moderna desenvolvida com Flask e Python, proporcionando uma experiência completa para apostadores e administradores.
 
