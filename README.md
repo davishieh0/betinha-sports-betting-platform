@@ -1,4 +1,4 @@
-# 🎲 Betinha Sports Betting Platform
+# Betinha Sports Betting Platform
 
 Uma plataforma completa de apostas esportivas desenvolvida com Flask e Python, oferecendo um ambiente seguro e intuitivo para apostadores e administradores.
 
