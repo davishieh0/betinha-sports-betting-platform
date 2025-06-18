@@ -1,45 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %} 
-        <ul id="messages" class="list-unstyled">
-        {% for message in messages %}
-            <li class="alert alert-success">{{ message }}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
-    {% endwith %}
-    
-    <h1>{{proxima}}</h1>
-    <div>
-        <h1>Página de Eventos</h1>
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Valor cota</th>
-                <th>Hora de início</th>
-                <th>Hora do fim</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for item in lista%}
-            <tr>
-                
-                <td>{{item.titulo}}</td>
-                <td>{{item.valor_cota}}</td>
-                <td>{{item.hora_inicio}}</td>
-                <td>{{item.hora_fim}}</td>
-            </tr>
-            {% endfor%}
-        </tbody>
-    </table>
-</body>
-</html>
+{%extends "base.html"%}
+
+{%block content%}
+<form action="/register">
+  <input type="submit" value="Crie uma conta agora" />
+</form>
+{%endblock%}

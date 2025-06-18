@@ -1,0 +1,41 @@
+# Arquivos de configuração sensíveis
+.env
+
+# Logs
+*.log
+logs/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+
+# Banco de dados local
+*.db
+*.sqlite
+*.sqlite3
+
+# Scripts de migração (temporários)
+migrate_passwords.py
+IMPLEMENTACAO_CONCLUIDA.md
